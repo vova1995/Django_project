@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-
-<div class="container">
+	<div class="container">
 <table class="table">
     <thead>
       <tr>
@@ -15,7 +13,7 @@
     <tbody>
     	{% for item in catalog %}
       <tr>
-        <td>{{item.name}}</td>
+        <td><a style="color: black;" href="{% url 'catalog_detail' item.id %}">{{item.name}}</a></td>
         <td>{{item.place}}</td>
         <td>{{item.price}} <a style="color: black;" href="#"><span class="glyphicon glyphicon-plus"></span></a></td>
       </tr>
@@ -24,6 +22,4 @@
     </tbody>
   </table>
 		</div>
-
-
 {% endblock %}
