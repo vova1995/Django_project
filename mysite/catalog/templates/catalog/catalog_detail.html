@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
+	<div>
+		<a style="background-color: black;" class="btn btn-primary" href="{% url 'catalog:home' %}">&larr; Return back to the catalog</a>
+		<br>
+		<br>
+	</div>
+
 	<div>
 		{{ catalog_item.name }}
 	</div>
