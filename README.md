@@ -27,3 +27,6 @@ than create superuser
 python3 manage.py createsuper 
 login: admin
 password: admin12345
+
+used importin to db from csv files
+file import.py
