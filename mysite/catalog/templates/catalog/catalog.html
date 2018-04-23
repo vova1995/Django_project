@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+  <div class="container-fluid ">
+    <div class="row">
+        <div class="col-lg-12"><p class="text-right"><a href="#"><span style="color: black">Войдите, чтобы сделать заказ</span></a></p></div>
+        <div class="col-lg-12 "><h5 class="text-left "><b>Продукты:</b></h5></div>
+    </div>
+  </div>
+
 	<div class="container">
 <table class="table">
     <thead>
       <tr>
         <th>Наименование</th>
         <th>Заведение</th>
-        <th>Цена</th>
+        <th class="price">Цена</th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +22,7 @@
       <tr>
         <td><a style="color: black;" href="{% url 'catalog:detail' item.id %}">{{item.name}}</a></td>
         <td>{{item.place}}</td>
-        <td>{{item.price}} <a style="color: black;" href="#"><span class="glyphicon glyphicon-plus"></span></a></td>
+        <td class="word-spacing"S>{{item.price}} <a class="black" href="#"><span class="glyphicon glyphicon-plus"></span></a></td>
       </tr>
       	{% endfor %}
       
