@@ -1,17 +1,19 @@
-from django.shortcuts import render
-from catalog.models import Catalog
-from datetime import date
-
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import UserCreationForm
 
 def home(request):
 	
-	# return HttpResponse('<h1>Hello' + name + '</h1>')
 
-	context = {
-		# 'currentdate': date,
+	return render(request, 'my_app/home.html')
 
-		'catalog': Catalog.objects.all()[:8],
+def register(request):
+	if request.method == 'POST':
+		form = UserCreationForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('/home')
+	else:
+		form = UserCreationForm()
 
-	}
-	return render(request, 'my_app/home.html', context)
-
+		args = {'form': form}
+		return render(request, 'my_app/reg_form.html', args)
