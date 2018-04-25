@@ -31,17 +31,28 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"> currentdate </a>
+      <p class="navbar-brand" href="#"><span id="time" title="This is current date" style="color: black;"></span></p>
     </div>
+
+      <script>
+        var d = new Date();
+        document.getElementById("time").innerHTML = d.toISOString().slice(0,10);
+      </script>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/register">Неизвестный пользователь</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+        <li><a id="log" onclick='document.getElementById("log").innerHTML = "Log in"' href="/register">Неизвестный пользователь</a></li>
+        <li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+<!-- 
+      <script>
+        var d = "Log in";
+        document.getElementById("log").innerHTML = d;
+      </script> -->
+
 </nav>
   </body>
 		
