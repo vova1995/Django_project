@@ -19,6 +19,7 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body>
     <nav class="navbar navbar-default">
@@ -31,7 +32,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-brand" href="#"><span id="time" title="This is current date" style="color: black;"></span></p>
+      <a class="navbar-brand" href="/home"><span id="time" title="This is current date" style="color: black;"></span></a>
     </div>
 
       <script>
@@ -47,18 +48,12 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-<!-- 
-      <script>
-        var d = "Log in";
-        document.getElementById("log").innerHTML = d;
-      </script> -->
 
 </nav>
   </body>
 		
     {% block content %}{% endblock %}
 
-	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
