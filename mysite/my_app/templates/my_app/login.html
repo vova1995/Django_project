@@ -2,6 +2,16 @@
 
 
 {% block content %}
+
+<script>
+   var redirectId = setInterval(function() {
+          window.location.replace("/home");
+          }, 35000);
+
+   setTimeout(function() {
+      clearInterval(redirectId);
+          }, 36000);
+</script>
 <div class="container">
 	<h1>Welcome</h1>
 	<p>

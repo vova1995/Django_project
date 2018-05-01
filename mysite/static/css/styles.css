@@ -28,3 +28,19 @@ td.word-spacing {
 a.black {
 	color: black;
 }
+
+
+input {
+	position: fixed;
+	left: 242px;
+	border: 2px solid #FF7F50;
+    border-radius: 4px;
+}
+
+input:focus {
+    background-color: lightblue;
+}
+
+span.helptext {
+	display:none; 
+}

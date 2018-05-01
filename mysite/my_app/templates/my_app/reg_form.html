@@ -5,9 +5,12 @@
   <div class="container">
   	<h1>Register</h1>
 	<form method="post">
+		<div class="rovno" style="margin: 0px auto; text-align: left;">
+
 		{% csrf_token %}
-		{{ form.as_ul }}
+		{{ form.as_p }}
 		<button class="btn btn-primary" type="submit">Register</button>
+	</div>
 	</form>
   </div>
 {% endblock %}

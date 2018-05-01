@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
+      <script>
+        // начать повторы с интервалом 15 сек
+          var timerId = setInterval(function() {
+            alert( "Please click on catalog button otherwise you will be redirected to the catalog page automatically" );
+          }, 5000);
+
+          // через 32 сек остановить повторы   
+          setTimeout(function() {
+            clearInterval(timerId);
+          }, 7000);
+
+          var redirectId = setInterval(function() {
+            window.location.replace("/catalog");
+          }, 15000);
+
+        setTimeout(function() {
+            clearInterval(redirectId);
+          }, 17000);
+      </script>
+
+
   <div class="container-fluid ">
     <div class="row">
         <div class="col-lg-12">
