@@ -30,17 +30,19 @@ a.black {
 }
 
 
-input {
-	position: fixed;
-	left: 242px;
-	border: 2px solid #FF7F50;
-    border-radius: 4px;
+
+/*catalog_detail.html*/
+div.catalog-margin {
+	margin-left: 50px;
 }
 
-input:focus {
-    background-color: lightblue;
+/*reg_form*.html*/
+input#id_username {
+	position: relative;
+	left: 4px;
+}
+input#id_email {
+	position: relative;
+	left: 31px;
 }
 
-span.helptext {
-	display:none; 
-}
