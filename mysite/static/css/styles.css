@@ -46,3 +46,7 @@ input#id_email {
 	left: 31px;
 }
 
+/*home.html*/
+a.admin_style {
+	color: red;
+}
