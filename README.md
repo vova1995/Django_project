@@ -29,4 +29,4 @@ login: admin
 password: admin12345
 
 used importin to db from csv files
-file import.py
+file import.python3
