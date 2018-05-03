@@ -1,4 +1,9 @@
+<!-- in order to avoid inheritance with styles with login.html i included forms into div class="even" -->
 {% extends 'base.html' %}
+
+{% block head %}
+	<title>Registration</title>
+{% endblock %}
 
 {% block content %}
 <br>
@@ -6,7 +11,7 @@
   	<h1>Register</h1>
 	<form method="post">
 		{% csrf_token %}
-		<div>
+		<div class="even">
 			{{ form.as_p }}
 			<button class="btn btn-primary" type="submit">Register</button>
 		</div>

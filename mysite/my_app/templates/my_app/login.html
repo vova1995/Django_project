@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 
+{% block head %}
+<title>Login</title>
+{% endblock %}
 
 {% block content %}
 
 <script>
    var redirectId = setInterval(function() {
           window.location.replace("/home");
-          }, 35000);
+          }, 355000);
 
    setTimeout(function() {
       clearInterval(redirectId);
-          }, 36000);
+          }, 366000);
 </script>
 <div class="container">
 	<h1>Welcome</h1>
@@ -21,7 +24,7 @@
 	<form method="post">
 		{% csrf_token %}
 		{{ form.as_p }}
-		<button type="submit">Login</button>
+		<button class="btn btn-primary" type="submit">Login</button>
 	</form>
 </div>
 

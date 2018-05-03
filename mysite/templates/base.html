@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% block head %}
     <title>Shaurman</title>
+    {% endblock %}
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -53,16 +55,31 @@
 
 		
     {% block content %}{% endblock %}
-
+<!-- In order to attach footer to the bottom i added bootstrap class footer navbar-fixed-bottom -->
     <footer style="background-color:  #e7e7e7;" class="footer navbar-fixed-bottom">
       <div class="container">
         <p style="font-style: oblique; margin-top: 5px;" class="text-center"><b>Designed by Volodymyr Petryna.</b></p>
-        <ul>
-          <li><a href="/catalog">Menu</a></li>
-          <li><a href="/admin">Django-admon</a></li>
-          <li><a href="/register">Неизвестный пользователь</a></li>
-          <li><a href="/profile">Profile</a></li>          
-        </ul>
+        <p style="font-style: oblique;" class="text-right">Follow me with social media</p>
+        <div class="row">
+          <div class="col-sm-6">
+           <ul>
+            <li><a href="/catalog">Menu</a></li>
+            <li><a href="/admin">Django-admin</a></li>
+            <li><a href="/register">Неизвестный пользователь</a></li>
+            <li><a href="/profile">Profile</a></li>
+          </ul>
+          </div>
+            <div class="col-sm-6 text-right">
+             <ul>
+            <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="Nema)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/%D0%B2%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80-%D0%BF%D0%B5%D1%82%D1%80%D0%B8%D0%BD%D0%B0-998135135/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="Nema)"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>  
+            <li><a href="https://github.com/vova1995/" target="_blank"><i class="fa fa-git" aria-hidden="true"></i></a></li> 
+  
+             </ul>  
+            </div>
+        </div>
       </div>
     </footer>
 
