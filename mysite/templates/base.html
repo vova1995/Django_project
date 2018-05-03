@@ -50,19 +50,21 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-    <script>
-      function urlRedirect(){
-        if(
-          window.location.href=="http://127.0.0.1:8000/login/"){
-            alert('Hello')
-        }
 
-      }
-    </script>
-  </body>
 		
     {% block content %}{% endblock %}
 
+    <footer style="background-color:  #e7e7e7;" class="footer navbar-fixed-bottom">
+      <div class="container">
+        <p style="font-style: oblique; margin-top: 5px;" class="text-center"><b>Designed by Volodymyr Petryna.</b></p>
+        <ul>
+          <li><a href="/catalog">Menu</a></li>
+          <li><a href="/admin">Django-admon</a></li>
+          <li><a href="/register">Неизвестный пользователь</a></li>
+          <li><a href="/profile">Profile</a></li>          
+        </ul>
+      </div>
+    </footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

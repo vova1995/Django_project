@@ -37,16 +37,45 @@ div.catalog-margin {
 }
 
 /*reg_form*.html*/
+input {
+	border: 3px solid #f2dedeeb;
+	border-radius: 25px;
+}
+
+input:focus{
+	background-color: lightblue;
+	border: 3px solid #555;
+}
+
 input#id_username {
 	position: relative;
-	left: 4px;
+	left: 86px;
+
+}
+input#id_first_name {
+	position: relative;
+	left: 83px;
+}
+
+input#id_last_name {
+	position: relative;
+	left: 85px;
 }
 input#id_email {
 	position: relative;
-	left: 31px;
+	left: 117px;
+}
+input#id_password1 {
+	position: relative;
+	left: 88px;
+}
+
+span.helptext {
+	display: none;
 }
 
 /*home.html*/
 a.admin_style {
 	color: red;
 }
+
