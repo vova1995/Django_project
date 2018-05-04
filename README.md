@@ -1,7 +1,8 @@
+Ubuntu
 use virtualenv
 command: virtualenv venv
 than activate virtualenv
-command source venv/bin/activate
+command: source venv/bin/activate
 install django 1.9.7
 command: pip install Django==1.9.7
 create django project
