@@ -34,10 +34,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/home"><span id="time" title="This is current date" style="color: black;"></span></a>
+        <a class="navbar-brand" href="/home">Shaurman</a>
+
+<!--       <a class="navbar-brand" href="/home"><span id="time" title="This is current date" style="color: black;"></span></a> -->
       <ul class="nav navbar-nav navbar-left">
+        <li><a href="/home"><span id="time" title="This is current date"></span></a></li>
         <li class="active"><a href="/catalog">Menu</a></li>
-        <li ><a class="admin_style" href="/admin">Django-admin</a></li>
+        <li><a class="admin_style" href="/admin">Django-admin</a></li>
     </div>
       <script>
         var d = new Date();
@@ -46,9 +49,15 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/register">Неизвестный пользователь</a></li>
-        <li><a href="/profile"><span class="glyphicon glyphicon-user"></span></a></li>
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Неизвестный пользователь</a></li>
+        <li><a href="/profile">Profile</a></li>
       </ul>
+          <form class="navbar-form navbar-right" action="#">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -56,7 +65,7 @@
 		
     {% block content %}{% endblock %}
 <!-- In order to attach footer to the bottom i added bootstrap class footer navbar-fixed-bottom -->
-    <footer style="background-color:  #e7e7e7;" class="footer navbar-fixed-bottom">
+    <footer style="background-color:  #e7e7e761; border-top: 2px solid #ddd;" class="footer navbar-fixed-bottom">
       <div class="container">
         <p style="font-style: oblique; margin-top: 5px;" class="text-center"><b>Designed by Volodymyr Petryna.</b></p>
         <p style="font-style: oblique;" class="text-right">Follow me with social media</p>

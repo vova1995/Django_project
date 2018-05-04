@@ -30,3 +30,5 @@ password: admin12345
 
 used importin to db from csv files
 file import.python3
+
+if u forget admin password i recommend u a great topic : https://www.laurivan.com/change-a-django-password-manually/

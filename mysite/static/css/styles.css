@@ -78,6 +78,24 @@ span.helptext {
 
 
 /*base.html*/
+nav div.container-fluid div.navbar-header a:hover{
+	color: #06a1ea;
+}
+
+nav div.collapse.navbar-collapse a:hover{
+	color: #06a1ea;
+}
+
+nav div.container-fluid div.navbar-header li.active a:hover{
+	color: #06a1ea;
+}
+
+nav ul li a:hover{
+	text-decoration: none;
+    color: #06a1ea;
+
+}
+
 footer div.col-sm-6 ul li a{
 	color: black;
 	font-family: Georgia, 'Times New Roman', Times, serif;
