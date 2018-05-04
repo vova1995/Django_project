@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 
 
 # Create your models here.
-class UserProfile(models.Model):
+class UserProfile(models.Model):#we created UserProfile in order to show it in admin and then we used it in profile page
 	user = models.OneToOneField(User)
 	name = models.CharField(max_length=150, default='')
 	surname = models.CharField(max_length=150, default='')

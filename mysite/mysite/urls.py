@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf.urls import url, include#include gives us possibility to see and include urls from apps it s searching in my_app and seacrh module urls can be without py 
 from django.contrib import admin
 from mysite import views
 

@@ -11,6 +11,14 @@ create first app
 command: python ./manage.py startapp catalog
 create second one
 command: python ./manage.py startapp my_app
+
+than create superuser
+python3 manage.py createsuper 
+login: admin
+password: admin12345
+
+we need to create templates in such way my_rep/templates/my_rep and i this case django is able to see html files and we should update setting.py
+
 install django rest framework
 commands:
 pip install djangorestframework
@@ -24,10 +32,7 @@ cd django-rest-framework
 pip install -r requirements.txt
 pip install -r optionals.txt
 
-than create superuser
-python3 manage.py createsuper 
-login: admin
-password: admin12345
+
 
 used importin to db from csv files
 file import.python3

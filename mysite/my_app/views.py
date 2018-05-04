@@ -5,9 +5,11 @@ from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 
 def home(request):
-	
+	context = {
+		'title' : "Home page content and descriptions will be added soon"# тайтл це назва змінної і якщо ми вставим цю змінну в файд home.html Значення буде відображено
+	}
 
-	return render(request, 'my_app/home.html')
+	return render(request, 'my_app/home.html', context)
 
 def register(request):
 	if request.method == 'POST':
