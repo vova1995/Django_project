@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Catalog
 
 
-def catalog_home(request):
+def catalog_home(request):#we can see in urls we have name=home and it is because of the variable catalog we can write just home without anything else
 	catalog_list = Catalog.objects.all()
 	paginator = Paginator(catalog_list, 8) 
 

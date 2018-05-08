@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
-
+{% load staticfiles%}
 {% block content %}
       <script>
         // начать повторы с интервалом 15 сек
           var timerId = setInterval(function() {
-            alert( "Please click on Menu button otherwise you will be redirected to the catalog page automatically" );
+            alert( "Please click on Menu button otherwise you will be redirected to the menu page automatically" );
           }, 5000);
 
           // через 32 сек остановить повторы   
@@ -22,19 +22,24 @@
       </script>
 
 
-  <div class="container-fluid ">
-    <div class="row">
-        <div class="col-lg-12">
-          <h1 class="text-center p-3 mb-2 bg-primary text-white">Меню ресторана Шаурмино!</h1>
-        </div>
-        <br>
-        <br>
-        <div class="text-center">
-          <h1 class="btn btn-danger">{{ title }}</h1>
-        </div>
-
+ <body class="home">
+   <div class="container">
+  <div class="row">
+<!--     <div class="col-sm-6">
+      <img style="height: 100px; width: 100px; position: relative; margin-top: 0; margin-left: 0"   src="{% static 'images/backimg.jpeg' %}" alt="hi">
+    </div> -->
+    <div style="margin-left: -266px;" class="col-sm-6">
+        <a href="/catalog"><img src="{% static 'images/meat.webp' %}" height="300" width="450"  alt="hi"></a>
     </div>
   </div>
+</div>
+ </body>
+
+
+<!-- src="{% static 'images/meat.webp' %}" - way of adding images in styles there is option how to add background-->
+
+
+
 
 
 {% endblock %}

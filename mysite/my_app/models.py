@@ -11,7 +11,7 @@ class UserProfile(models.Model):#we created UserProfile in order to show it in a
 	email = models.EmailField()
 
 	def __str__(self):
-		return 'User: ' + str(self.user) + ', ' + 'Surname:  '+ self.surname + ', ' + 'Email: ' + self.email
+		return self.user.username#Якщо ми в темплейті добавим профайл, то задопомогою стр ми зможемо коректно відображати інфо, див профайл.хтмл
 		# return str(self.user) + '\t' + self.surname + '\t' + self.email
 
 def create_profile(sender, **kwargs):

@@ -45,6 +45,7 @@ input {
 input:focus{
 	background-color: lightblue;
 	border: 3px solid #555;
+
 }
 
 div.even input#id_username {
@@ -78,6 +79,13 @@ span.helptext {
 
 
 /*base.html*/
+
+
+/*body.home {
+     background: url("/static/images/backimg.jpeg");in such way it is possible to add background-image
+     width: 100%;
+     } it is how to add background img*/
+
 nav div.container-fluid div.navbar-header a:hover{
 	color: #06a1ea;
 }
@@ -105,7 +113,6 @@ footer div.col-sm-6 ul li a{
 footer div.col-sm-6 ul li a:hover{
 	text-decoration: none;
     color: #0f9de4;
-
 }
 
 footer div.col-sm-6 ul li{

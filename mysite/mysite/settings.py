@@ -135,7 +135,14 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/home/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')# in order to give django possib to see staic files
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')#string that gives django possib to see media files
+
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 1025
+
+#these links are added from stackoverflow in order to give us permission to send email
+#https://stackoverflow.com/questions/5802189/django-errno-111-connection-refused/5802348#5802348 link with variables
