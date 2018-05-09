@@ -132,13 +132,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/media/'
+
 LOGIN_REDIRECT_URL = '/home/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')# in order to give django possib to see staic files
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')#string that gives django possib to see media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mysite/media')#string that gives django possib to see media files
 
 
 EMAIL_HOST = 'localhost'

@@ -9,6 +9,7 @@ class UserProfile(models.Model):#we created UserProfile in order to show it in a
 	name = models.CharField(max_length=150, default='')
 	surname = models.CharField(max_length=150, default='')
 	email = models.EmailField()
+	image = models.ImageField(upload_to='app_images')
 
 	def __str__(self):
 		return self.user.username#Якщо ми в темплейті добавим профайл, то задопомогою стр ми зможемо коректно відображати інфо, див профайл.хтмл

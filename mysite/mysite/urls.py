@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url, include#include gives us possibility to see and include urls from apps it s searching in my_app and seacrh module urls can be without py 
 from django.contrib import admin
 from mysite import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 	url(r'^', include('my_app.urls')),
@@ -23,4 +25,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.login_redirect, name='login_redirect'),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
