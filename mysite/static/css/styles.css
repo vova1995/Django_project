@@ -101,6 +101,31 @@ span.helptext {
 
 /*base.html*/
 
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	padding: 1% 0;
+	font-size: 1.2em;
+}
+   
+
+.navbar-brand>img{
+	margin-top: -36px;
+	margin-left: -12px;
+	height: 89px;
+	width: 123px;
+	min-height: 83px;
+}
+
+.navbar-brand:hover{
+}
+
+.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:focus, .navbar-default .navbar-nav .active a:hover{
+	color: #333232;
+	background-color: #F8F8F8;
+}
+
+
 
 /*body.home {
      background: url("/static/images/backimg.jpeg");in such way it is possible to add background-image

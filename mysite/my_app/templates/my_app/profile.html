@@ -7,8 +7,13 @@
       <p>First name: {{ user.first_name }}</p>
       <p>First name: {{ user.last_name }}</p>
       <p>Email: {{ user.email }}</p>
-      <p>Descprion: {{ user.userprofile.name }}</p>
-      <img src="{{ user.userprofile.image.url }} " alt="" width="250">     
+      {% if user.userprofile.image %}
+        <p><img src="{{ user.userprofile.image.url }} " alt="" width="250"></p>
+      {% else %}
+   <p><a href="/admin/my_app/userprofile/"><button title="You need to choose user and attach file" class="btn btn-primary">Rediret to Userprofile page</button></b></a></p>
+{% endif %}
+		
+   
       <!-- Дає можливість перевіряти стр вивід -->
 </div>
 
