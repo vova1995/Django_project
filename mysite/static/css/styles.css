@@ -20,6 +20,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 170px;
+  background-color: #e7e7e726;
 }
 .footer {
   position: absolute;
@@ -125,6 +126,29 @@ span.helptext {
 	background-color: #F8F8F8;
 }
 
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	text-transform: uppercase;
+}
+
+.btn-default{
+	font-size: 18px;
+	color: white;
+	padding: 12px 22px;
+	background-color: #1a0d00;
+
+}
+
+.btn-default:hover{
+	background-color: #663300;
+}
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+}
 
 
 /*body.home {
