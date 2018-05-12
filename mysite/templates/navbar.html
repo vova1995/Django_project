@@ -1,0 +1,51 @@
+{% load static %}
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="/home"><img src="{% static 'images/log.jpg' %}" alt=""></a>
+
+<!--       <a class="navbar-brand" href="/home"><span id="time" title="This is current date" style="color: black;"></span></a> -->
+      <ul class="nav navbar-nav navbar-left">        
+        <li><a href="/home"><span id="time" title="This is current date"></span></a></li> 
+        <li class="active"><a href="/catalog">Menu</a></li>
+        <li><a class="admin_style" href="/admin">Django-admin</a></li>
+      </ul>
+    </div>
+      <script>
+        var d = new Date();
+        document.getElementById("time").innerHTML = d.toISOString().slice(0,10);
+      </script>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      {% if user.is_authenticated %}
+       <!-- вбудована функція що дає можливість перевіряти в джанго чи юзер залогінений -->
+      <ul class="nav navbar-nav">
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/profile/edit">Edit profile</a></li>
+<!--         <li><a href="{% url 'edit_profile' %}">Edit profile</a></li>  it is possible to do links in such way just with the name of the url-->
+        <li><a href="/change-password">Change password</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+      {% else %}
+      <ul class="nav navbar-nav">
+        <li><a href="/reset-password">Reset password</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+        <li><a href="/login">Login</a></li>   
+      </ul>
+      {% endif %}
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
