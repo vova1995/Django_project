@@ -15,17 +15,28 @@
       clearInterval(redirectId);
           }, 366000);
 </script>
-<div class="container">
-	<h1>Welcome</h1>
-	<p>
-		You can login here!
-	</p>
-	<h2>Login</h2>
-	<form method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<button class="btn btn-primary" type="submit">Login</button>
-	</form>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel panel-success">
+        <div class="panel-heading"><h2>Welcome</h2></div>
+          <div class="panel-body">
+            <p>
+			You can login here!
+			</p>
+			<h2>Login</h2>
+				<form method="post">
+					{% csrf_token %}
+					{{ form.as_p }}
+					<button class="btn btn-success" type="submit">Login</button>
+				</form>
+          </div>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 
 {% endblock %}

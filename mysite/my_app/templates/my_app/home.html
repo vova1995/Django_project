@@ -8,20 +8,20 @@
         // начать повторы с интервалом 15 сек
           var timerId = setInterval(function() {
             alert( "Please click on Menu button otherwise you will be redirected to the menu page automatically" );
-          }, 115000);
+          }, 15000);
 
           // через 32 сек остановить повторы   
           setTimeout(function() {
             clearInterval(timerId);
-          }, 117000);
+          }, 17000);
 
           var redirectId = setInterval(function() {
             window.location.replace("/catalog");
-          }, 1115000);
+          }, 115000);
 
         setTimeout(function() {
             clearInterval(redirectId);
-          }, 1117000);
+          }, 117000);
       </script>
 {% endblock %}
 
@@ -60,19 +60,37 @@
   </a>
 </div><!---End slider-->
  
+<br>
+
+<a class="resume" href="{% static 'file/CV.docx' %}" download>
 <div class="container text-center">
   <div class="panel panel-primary">
     <div class="panel-heading"><h1>Owner</h1></div>
     <div class="panel-body">
       <div class="row">
         <div class="col-sm-6">
-          <img src="{% static 'images/iam.jpg' %}" alt="" width="195" height="270">
+          <img src="{% static 'images/iam.jpg' %}" alt="" class="img-responsive" width="240" style="margin: auto;">
         </div>
       <div class="col-sm-6">
         <div class="panel panel-info">
           <div class="panel-heading"><h2>Resume</h2></div>
           <div class="panel-body">
-            
+            <h4 class="text-left">Basic knowledge of programming languages:</h4>
+            <ol class="text-left">
+              <li>Python2/3,</li>
+              <li>HTML,</li>
+              <li>CSS,</li>
+              <li>JavaScript,</li>
+              <li>SQL(Postgresql),</li>
+            </ol>
+             <h4 class="text-left">Experience in:</h4>
+            <ol class="text-left">
+              <li>Django,</li>
+              <li>Flask,</li>
+              <li>Git,</li>
+              <li>Linux(Bash),</li>
+              <li>HTTP</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -80,13 +98,64 @@
     </div>
   </div>  
 </div>
+</a>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="{% static 'images/item1.jpg' %}" alt="" class="img-responsive">
+    </div>
+    <div class="col-md-4">
+      <h4>Проэкт</h4>
+      <p>Шаурман это проэкт что дает людям возможность выбрать лучшую шаурму по своему вкусу</p>
+      <p>Шаурма (араб. شاورما‎, ивр. ‏שווארמה‏‎) — ближневосточное (левантийское) блюдо из питы или лаваша, начинённого приготовленным на гриле, а затем рубленным мясом (баранина, курятина, реже телятина, индюшатина) с добавлением специй, соусов и салата из свежих овощей. В немусульманских странах может встречаться и свинина. Употребляется без использования столовых приборов.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="{% static 'images/log.jpg' %}" alt="" class="img-responsive">
+    </div>
+  </div>
+</div>
 
-
-
-<!--    <div class="col-sm-4">
-        <a href="/catalog"><img src="{% static 'images/meat.webp' %}" alt="hi"></a>
-    </div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <h4>Ингредиенты для приготовления шаурмы</h4>
+      <div class="overflow">
+      <ol class="text-left">
+        <li>Свинина — 300 Грамм</li>
+        <li>Лаваш — 2 Штуки</li>
+        <li>Помидоры черри — 10-12 Штук</li>
+        <li>Огурец — 1 Штука</li>
+        <li>Майонез — 150 Грамм</li>
+        <li>Укроп — 1 По вкусу</li>
+        <li>Чеснок — 2-3 Зубчиков</li>
+        <li>Капуста пекинская — 1 Штука</li>
+      </ol>
+    </div>
+    </div>
+    <div class="col-lg-3">
+      <h4>Видео</h4>
+      Should be video but git doesnt allow over 100 mb
+     <!--  <video class="img-responsive" controls>
+        <source src="{% static 'images/video1.mp4' %}" type="video/mp4"> </source>
+      </video> -->
+    </div>
+    <div class="col-lg-3">
+      <div class="overflow">
+      <h4>Рецепт приготовления шаурмы</h4>
+      <p>Готовим маринад из лимонного сока, воды, соли, перца и оливкового масла.</p>
+      <p>Тонко режем небольшими пластинами куриное филе и смешиваем с маринадом. Оставляем на 15 минут.</p>
+      <p>Режем колечками красный лук, тонкими ломтиками — соленый огурец, измельчаем кинзу.</p>
+      <p>Разогреваем с минимумом масла сковороду и хорошо обжариваем филе. Оно должно остаться сочным внутри.</p>
+      <p>На лаваш намазываем соусы, кладем лук, соленый огурец, сверху выкладываем готовое мясо.Мясо поливаем соусами, присыпаем зеленью.</p>
+      <p>Сворачиваем плотно лаваш и обжариваем с двух сторон на сухой сковороде. Выкладываем готовую шаурму на порционную тарелку. Один конец шаурмы можно смазать любимым соусом.</p>
+    </div>
+    </div>
+    <div class="col-lg-3">
+        <h1>Should be video but git doesnt allow over 100 mb</h1>
+    </div>
+  </div>
+</div>
 
 
 <!-- src="{% static 'images/meat.webp' %}" - way of adding images in styles there is option how to add background-->

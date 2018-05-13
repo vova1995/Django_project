@@ -1,20 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="container">
-  <h1>Profile</h1>
-      <p>Username: {{ user }}</p>
-      <p>First name: {{ user.first_name }}</p>
-      <p>First name: {{ user.last_name }}</p>
-      <p>Email: {{ user.email }}</p>
-      {% if user.userprofile.image %}
-        <p><img src="{{ user.userprofile.image.url }} " alt="" width="250"></p>
-      {% else %}
-   <p><a href="/admin/my_app/userprofile/"><button title="You need to choose user and attach file" class="btn btn-primary">Rediret to Userprofile page</button></b></a></p>
-{% endif %}
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading"><h2>Profile</h2></div>
+          <div class="panel-body">
+              <p>Username: {{ user }}</p>
+              <p>First name: {{ user.first_name }}</p>
+              <p>First name: {{ user.last_name }}</p>
+              <p>Email: {{ user.email }}</p>
+              {% if user.userprofile.image %}
+                <p><img src="{{ user.userprofile.image.url }} " alt="" width="250"></p>
+              {% else %}
+           <p><a href="/admin/my_app/userprofile/"><button title="You need to choose user and attach file" class="btn btn-primary">Rediret to Userprofile page</button></b></a></p>
+        {% endif %}            
+          </div>
+      </div>
+    </div>
+  </div>
 		
    
       <!-- Дає можливість перевіряти стр вивід -->
 </div>
+
+
 
 {% endblock %}
